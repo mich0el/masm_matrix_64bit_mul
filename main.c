@@ -41,6 +41,19 @@ int main() {
 			printf("%lf ", matrix3[i][j]);
 		printf("\n");
 	}
-
+	
+	//memory free
+	for (int i = 0; i < a; i++) {
+		free(matrix1[i]);
+		free(matrix2[i]);
+	}
+	
+	free(matrix1);
+	free(matrix2);
+	
+	for (int i = 0; i < b; i++)
+		free(matrix3[i]);
+	free(matrix3);
+	
 	return 0;
 }
