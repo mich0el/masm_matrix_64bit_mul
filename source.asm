@@ -72,26 +72,26 @@ ptl3:
 endPtl3:
 	;row1ptr?
 	mov	eax, 4
-	mul	ebx		        ; eax = ecx*4
+	mul	ebx		        ;eax = ecx*4
 	mov	edi, mat1ptr
-	add	edi, eax		;=mat1ptr[ecx*4]	
+	add	edi, eax		; = mat1ptr[ecx*4]	
 	mov	edi, [edi]
 	mov	row1ptr, edi
 
-	mov	eax, 8			;8 bajt
+	mov	eax, 8			;8 bytes
 	mul	esi			;eax = esi*4
 	add	row1ptr, eax
 	
 	;row2ptr?
 	mov	eax, 4
-	mul	esi			;eax=4*esi
+	mul	esi			;eax = 4*esi
 	mov	edi, mat2ptr
 	add	edi, eax		;mat2ptr[esi*4]
 	mov	edi, [edi]
 	mov	row2ptr, edi
 
-	mov	eax, 8			;8 bajt
-	mul	ecx			;eax=4*ecx
+	mov	eax, 8			;8 bytes
+	mul	ecx			;eax = 4*ecx
 	add	row2ptr, eax
 
 	mov	edi, row1ptr
@@ -127,7 +127,7 @@ endPtl2:
 	mov	edi, [edi]
 	mov	row3ptr, edi
 
-	mov	eax, 8			;8 bajt
+	mov	eax, 8			;8 bytes
 	mul	ecx
 	add	row3ptr, eax
 
